@@ -70,8 +70,6 @@ export default function PersonalDetails() {
           onChange={handleChange}
           autoComplete="on"
         />
-        {/* Delete console log once finished */}
-        {console.log(personalDetails)};
       </fieldset>
     </form>
   );

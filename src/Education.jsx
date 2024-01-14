@@ -63,17 +63,15 @@ export default function Education() {
         value={education.endDate}
         onChange={handleChange}
       />
-      <label htmlFor="location">Location</label>
+      <label htmlFor="eduLocation">Location</label>
       <input
         type="text"
         name="location"
-        id="location"
+        id="eduLocation"
         placeholder="City, Country"
         value={education.location}
         onChange={handleChange}
       />
-      {/* Remove console log when finished */}
-      {console.log(education)}
     </fieldset>
   );
 }
