@@ -83,7 +83,11 @@ function App() {
         handleExperienceChange={handleExperienceChange}
         addExperience={addExperience}
       />
-      <PreviewCv />
+      <PreviewCv
+        personalDetails={personalDetails}
+        education={education}
+        experience={experience}
+      />
     </>
   );
 }

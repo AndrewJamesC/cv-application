@@ -118,7 +118,6 @@ export default function Experience(props) {
       })}
 
       <button onClick={() => props.addExperience()}>Add Work Experience</button>
-      {console.log(props.experience)}
     </fieldset>
   );
 }

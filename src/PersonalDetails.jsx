@@ -3,20 +3,6 @@
 import { useState } from "react";
 
 export default function PersonalDetails(props) {
-  // const [personalDetails, setPersonalDetails] = useState({
-  //   firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   phoneNum: "",
-  //   address: "",
-  // });
-
-  // function handleChange(event) {
-  //   setPersonalDetails((prevDetails) => {
-  //     const { name, type, value } = event.target;
-  //     return { ...prevDetails, [name]: value };
-  //   });
-  // }
   return (
     <form action="">
       <fieldset>
