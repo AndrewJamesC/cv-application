@@ -113,7 +113,6 @@ export default function Experience() {
               defaultValue={description}
               placeholder="Enter Description"
             ></textarea>
-            {console.log(experience)}
           </div>
         );
       })}

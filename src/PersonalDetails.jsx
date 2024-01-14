@@ -1,21 +1,22 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 
-export default function PersonalDetails() {
-  const [personalDetails, setPersonalDetails] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNum: "",
-    address: "",
-  });
+export default function PersonalDetails(props) {
+  // const [personalDetails, setPersonalDetails] = useState({
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   phoneNum: "",
+  //   address: "",
+  // });
 
-  function handleChange(event) {
-    setPersonalDetails((prevDetails) => {
-      const { name, type, value } = event.target;
-      return { ...prevDetails, [name]: value };
-    });
-  }
+  // function handleChange(event) {
+  //   setPersonalDetails((prevDetails) => {
+  //     const { name, type, value } = event.target;
+  //     return { ...prevDetails, [name]: value };
+  //   });
+  // }
   return (
     <form action="">
       <fieldset>
@@ -25,9 +26,9 @@ export default function PersonalDetails() {
           type="text"
           name="firstName"
           id="first-name"
-          value={personalDetails.firstName}
+          value={props.personalDetails.firstName}
           placeholder="John"
-          onChange={handleChange}
+          onChange={(event) => props.handlePersonalChange(event)}
           autoComplete="given-name"
         />
         <label htmlFor="last-name">Last Name</label>
@@ -35,9 +36,9 @@ export default function PersonalDetails() {
           type="text"
           name="lastName"
           id="last-name"
-          value={personalDetails.lastName}
+          value={props.personalDetails.lastName}
           placeholder="Doe"
-          onChange={handleChange}
+          onChange={(event) => props.handlePersonalChange(event)}
           autoComplete="family-name"
         />
         <label htmlFor="email">Email</label>
@@ -45,9 +46,9 @@ export default function PersonalDetails() {
           type="email"
           name="email"
           id="email"
-          value={personalDetails.email}
+          value={props.personalDetails.email}
           placeholder="name@email.com"
-          onChange={handleChange}
+          onChange={(event) => props.handlePersonalChange(event)}
           autoComplete="email"
         />
         <label htmlFor="phone-num">Phone Number</label>
@@ -55,9 +56,9 @@ export default function PersonalDetails() {
           type="tel"
           name="phoneNum"
           id="phone-num"
-          value={personalDetails.phoneNum}
+          value={props.personalDetails.phoneNum}
           placeholder="000-1234-5678"
-          onChange={handleChange}
+          onChange={(event) => props.handlePersonalChange(event)}
           autoComplete="tel"
         />
         <label htmlFor="address">Address</label>
@@ -65,9 +66,9 @@ export default function PersonalDetails() {
           type="text"
           name="address"
           id="address"
-          value={personalDetails.address}
+          value={props.personalDetails.address}
           placeholder="City, Country"
-          onChange={handleChange}
+          onChange={(event) => props.handlePersonalChange(event)}
           autoComplete="on"
         />
       </fieldset>
