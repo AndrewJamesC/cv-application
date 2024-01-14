@@ -12,10 +12,27 @@ function App() {
     address: "",
   });
 
+  const [education, setEducation] = useState({
+    school: "",
+    degree: "",
+    major: "",
+    startDate: "",
+    endDate: "",
+    location: "",
+  });
+
   function handlePersonalChange(event) {
     setPersonalDetails((prevDetails) => {
       const { name, value } = event.target;
       return { ...prevDetails, [name]: value };
+    });
+  }
+
+  function handleEducationChange(event) {
+    const { name, value } = event.target;
+
+    setEducation((prevEducation) => {
+      return { ...prevEducation, [name]: value };
     });
   }
   return (
@@ -23,6 +40,8 @@ function App() {
       <Form
         personalDetails={personalDetails}
         handlePersonalChange={handlePersonalChange}
+        education={education}
+        handleEducationChange={handleEducationChange}
       />
       <PreviewCv />
     </>

@@ -6,8 +6,8 @@ export default function Form(props) {
   return (
     <div>
       <PersonalDetails {...props} />
-      <Education />
-      <Experience />
+      <Education {...props} />
+      <Experience {...props} />
     </div>
   );
 }

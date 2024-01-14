@@ -1,22 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
-export default function Education() {
-  const [education, setEducation] = useState({
-    school: "",
-    degree: "",
-    major: "",
-    startDate: "",
-    endDate: "",
-    location: "",
-  });
-
-  function handleChange(event) {
-    const { name, value } = event.target;
-
-    setEducation((prevEducation) => {
-      return { ...prevEducation, [name]: value };
-    });
-  }
+export default function Education(props) {
   return (
     <fieldset>
       <legend>Education</legend>
@@ -26,8 +11,8 @@ export default function Education() {
         name="school"
         id="school"
         placeholder="University of Yourtown"
-        value={education.school}
-        onChange={handleChange}
+        value={props.education.school}
+        onChange={(event) => props.handleEducationChange(event)}
       />
       <label htmlFor="degree">Degree</label>
       <input
@@ -35,8 +20,8 @@ export default function Education() {
         name="degree"
         id="degree"
         placeholder="Bachelor of Arts"
-        value={education.degree}
-        onChange={handleChange}
+        value={props.education.degree}
+        onChange={(event) => props.handleEducationChange(event)}
       />
       <label htmlFor="major">Major(s)</label>
       <input
@@ -44,24 +29,24 @@ export default function Education() {
         name="major"
         id="major"
         placeholder="History"
-        value={education.major}
-        onChange={handleChange}
+        value={props.education.major}
+        onChange={(event) => props.handleEducationChange(event)}
       />
       <label htmlFor="startDate">Start Date</label>
       <input
         type="date"
         name="startDate"
         id="startDate"
-        value={education.startDate}
-        onChange={handleChange}
+        value={props.education.startDate}
+        onChange={(event) => props.handleEducationChange(event)}
       />
       <label htmlFor="endDate">End Date</label>
       <input
         type="date"
         name="endDate"
         id="endDate"
-        value={education.endDate}
-        onChange={handleChange}
+        value={props.education.endDate}
+        onChange={(event) => props.handleEducationChange(event)}
       />
       <label htmlFor="eduLocation">Location</label>
       <input
@@ -69,8 +54,8 @@ export default function Education() {
         name="location"
         id="eduLocation"
         placeholder="City, Country"
-        value={education.location}
-        onChange={handleChange}
+        value={props.education.location}
+        onChange={(event) => props.handleEducationChange(event)}
       />
     </fieldset>
   );
