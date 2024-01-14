@@ -27,17 +27,23 @@ export default function PreviewCv(props) {
           </div>
         </section>
         <section>
-          <h3>Work Experience</h3>
-          <div className="work-info-container">
-            <p>Start</p>
-            <p>End</p>
-            <p>Location</p>
-          </div>
-          <div className="work-details-container">
-            <p>Company Name</p>
-            <p>Job Title</p>
-            <p>description</p>
-          </div>
+          {props.experience.map((job) => {
+            return (
+              <div key={job.id}>
+                <h3>Work Experience</h3>
+                <div className="work-info-container">
+                  <p>{job.start}</p>
+                  <p>{job.end}</p>
+                  <p>{job.location}</p>
+                </div>
+                <div className="work-details-container">
+                  <p>{job.companyName}</p>
+                  <p>{job.title}</p>
+                  <p>{job.description}</p>
+                </div>
+              </div>
+            );
+          })}
         </section>
       </main>
     </header>
