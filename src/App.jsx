@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Form from "./Form";
 import PreviewCv from "./PreviewCv";
+import { v4 as uuid } from "uuid";
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -21,6 +22,18 @@ function App() {
     location: "",
   });
 
+  const [experience, setExperience] = useState([
+    {
+      companyName: "",
+      title: "",
+      start: "",
+      end: "",
+      location: "",
+      description: "",
+      id: uuid(),
+    },
+  ]);
+
   function handlePersonalChange(event) {
     setPersonalDetails((prevDetails) => {
       const { name, value } = event.target;
@@ -35,6 +48,30 @@ function App() {
       return { ...prevEducation, [name]: value };
     });
   }
+
+  function handleExperienceChange(event, id) {
+    const { name, value } = event.target;
+    setExperience((prevExp) =>
+      prevExp.map((exp) => (exp.id === id ? { ...exp, [name]: value } : exp)),
+    );
+  }
+
+  function addExperience() {
+    setExperience((prevExp) => {
+      return [
+        ...prevExp,
+        {
+          companyName: "",
+          title: "",
+          start: "",
+          end: "",
+          location: "",
+          description: "",
+          id: uuid(),
+        },
+      ];
+    });
+  }
   return (
     <>
       <Form
@@ -42,6 +79,9 @@ function App() {
         handlePersonalChange={handlePersonalChange}
         education={education}
         handleEducationChange={handleEducationChange}
+        experience={experience}
+        handleExperienceChange={handleExperienceChange}
+        addExperience={addExperience}
       />
       <PreviewCv />
     </>

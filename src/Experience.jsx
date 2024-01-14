@@ -1,58 +1,58 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
-import { v4 as uuid } from "uuid";
 
-export default function Experience() {
-  const [experience, setExperience] = useState([
-    {
-      companyName: "",
-      title: "",
-      start: "",
-      end: "",
-      location: "",
-      description: "",
-      id: uuid(),
-    },
-  ]);
+export default function Experience(props) {
+  // const [experience, setExperience] = useState([
+  //   {
+  //     companyName: "",
+  //     title: "",
+  //     start: "",
+  //     end: "",
+  //     location: "",
+  //     description: "",
+  //     id: uuid(),
+  //   },
+  // ]);
 
-  function addExperience() {
-    setExperience((prevExp) => {
-      return [
-        ...prevExp,
-        {
-          companyName: "",
-          title: "",
-          start: "",
-          end: "",
-          location: "",
-          description: "",
-          id: uuid(),
-        },
-      ];
-    });
-  }
+  // function addExperience() {
+  //   setExperience((prevExp) => {
+  //     return [
+  //       ...prevExp,
+  //       {
+  //         companyName: "",
+  //         title: "",
+  //         start: "",
+  //         end: "",
+  //         location: "",
+  //         description: "",
+  //         id: uuid(),
+  //       },
+  //     ];
+  //   });
+  // }
 
-  function handleChange(event, id) {
-    const { name, value } = event.target;
-    setExperience((prevExp) =>
-      prevExp.map((exp) => (exp.id === id ? { ...exp, [name]: value } : exp)),
-    );
+  // function handleChange(event, id) {
+  //   const { name, value } = event.target;
+  //   setExperience((prevExp) =>
+  //     prevExp.map((exp) => (exp.id === id ? { ...exp, [name]: value } : exp)),
+  //   );
 
-    // const { name, value, defaultValue } = event.target;
-    // const newExp = [...experience];
-    // if (name !== "description") {
-    //   setExperience((prevExp) => {
-    //     const newExp = [...prevExp];
-    //     newExp[index][name] = value;
-    //     return newExp;
-    //   });
-    // } else {
-    //   newExp[index][name] = defaultValue;
-    //   setExperience(newExp);
-    // }
-  }
+  //   // const { name, value, defaultValue } = event.target;
+  //   // const newExp = [...experience];
+  //   // if (name !== "description") {
+  //   //   setExperience((prevExp) => {
+  //   //     const newExp = [...prevExp];
+  //   //     newExp[index][name] = value;
+  //   //     return newExp;
+  //   //   });
+  //   // } else {
+  //   //   newExp[index][name] = defaultValue;
+  //   //   setExperience(newExp);
+  //   // }
+  // }
   return (
     <fieldset>
-      {experience.map((eduObj) => {
+      {props.experience.map((eduObj) => {
         const { companyName, title, start, end, location, description, id } =
           eduObj;
         return (
@@ -65,7 +65,7 @@ export default function Experience() {
               id="companyName"
               placeholder="Enter company name"
               value={companyName}
-              onChange={(event) => handleChange(event, id)}
+              onChange={(event) => props.handleExperienceChange(event, id)}
             />
             <label htmlFor="title">Position Title</label>
             <input
@@ -75,7 +75,7 @@ export default function Experience() {
               id="title"
               placeholder="Enter position title"
               value={title}
-              onChange={(event) => handleChange(event, id)}
+              onChange={(event) => props.handleExperienceChange(event, id)}
             />
             <label htmlFor="start">Start Date</label>
             <input
@@ -84,7 +84,7 @@ export default function Experience() {
               name="start"
               id="start"
               value={start}
-              onChange={(event) => handleChange(event, id)}
+              onChange={(event) => props.handleExperienceChange(event, id)}
             />
             <label htmlFor="end">End Date</label>
             <input
@@ -93,7 +93,7 @@ export default function Experience() {
               name="end"
               id="end"
               value={end}
-              onChange={(event) => handleChange(event, id)}
+              onChange={(event) => props.handleExperienceChange(event, id)}
             />
             <label htmlFor="jobLocation">Location</label>
             <input
@@ -102,7 +102,7 @@ export default function Experience() {
               name="location"
               id="jobLocation"
               value={location}
-              onChange={(event) => handleChange(event, id)}
+              onChange={(event) => props.handleExperienceChange(event, id)}
               placeholder="Enter Location"
             />
             <label htmlFor="jobDescription">Description</label>
@@ -117,7 +117,8 @@ export default function Experience() {
         );
       })}
 
-      <button onClick={addExperience}>Add Work Experience</button>
+      <button onClick={() => props.addExperience()}>Add Work Experience</button>
+      {console.log(props.experience)}
     </fieldset>
   );
 }
