@@ -110,8 +110,9 @@ export default function Experience(props) {
               key={`jobDescription-${id}`}
               name="description"
               id="jobDescription"
-              defaultValue={description}
+              value={description}
               placeholder="Enter Description"
+              onChange={(event) => props.handleExperienceChange(event, id)}
             ></textarea>
           </div>
         );

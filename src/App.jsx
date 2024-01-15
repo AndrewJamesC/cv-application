@@ -50,7 +50,7 @@ function App() {
   }
 
   function handleExperienceChange(event, id) {
-    const { name, value } = event.target;
+    const { name, value, type } = event.target;
     setExperience((prevExp) =>
       prevExp.map((exp) => (exp.id === id ? { ...exp, [name]: value } : exp)),
     );
