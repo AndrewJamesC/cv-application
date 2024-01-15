@@ -3,6 +3,7 @@
 export default function Experience(props) {
   return (
     <fieldset>
+      <legend>Work Experience</legend>
       {props.experience.map((eduObj) => {
         const { companyName, title, start, end, location, description, id } =
           eduObj;

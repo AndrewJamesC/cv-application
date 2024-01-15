@@ -5,6 +5,7 @@
 
 body {
   height: 100vh;
+  background-color: rgb(206, 206, 206);
 }
 
 #root {
@@ -16,18 +17,66 @@ body {
 .form {
   height: 99%;
   width: 40vw;
-  padding: 20px;
+  margin: 30px 90px;
 }
 
 fieldset,
 fieldset div {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .cv-container {
   border: 2px solid black;
-  height: 99%;
   width: 60vw;
-  padding: 50px;
+  margin: 30px 90px;
+  font-size: 1.2rem;
+  background-color: white;
+}
+
+.example {
+  color: red;
+  text-align: center;
+  font-weight: 900;
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+.header {
+  background-color: rgba(9, 69, 9, 0.64);
+  text-align: center;
+  padding: 20px;
+}
+
+address > * {
+  padding: 10px;
+}
+
+main {
+  padding: 25px;
+}
+
+h2,
+h3 {
+  font-size: 1.5rem;
+  background-color: rgba(9, 69, 9, 0.312);
+  text-align: center;
+}
+
+.education-flexbox,
+.work-flexbox {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.education-info-container,
+.work-info-container {
+  font-size: 0.9rem;
+}
+
+.degree-container,
+.work-details-container {
+  font-size: 1rem;
 }
