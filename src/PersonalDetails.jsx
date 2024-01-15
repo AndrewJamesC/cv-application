@@ -3,7 +3,7 @@
 export default function PersonalDetails(props) {
   return (
     <fieldset>
-      <legend>Personal Details</legend>
+      <p className="fieldset-title">Personal Details</p>
       <label htmlFor="first-name">First Name</label>
       <input
         type="text"

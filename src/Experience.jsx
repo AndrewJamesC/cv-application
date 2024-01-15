@@ -3,7 +3,7 @@
 export default function Experience(props) {
   return (
     <fieldset>
-      <legend>Work Experience</legend>
+      <p className="fieldset-title">Work Experience</p>
       {props.experience.map((eduObj) => {
         const { companyName, title, start, end, location, description, id } =
           eduObj;
@@ -66,6 +66,7 @@ export default function Experience(props) {
               placeholder="Enter Description"
               onChange={(event) => props.handleExperienceChange(event, id)}
             ></textarea>
+            <hr className="experience-break"></hr>
           </div>
         );
       })}

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
 }
 
 body {
@@ -15,9 +16,8 @@ body {
 }
 
 .form {
-  height: 99%;
   width: 40vw;
-  margin: 30px 90px;
+  margin: 10px 90px;
 }
 
 fieldset,
@@ -25,6 +25,7 @@ fieldset div {
   display: flex;
   flex-direction: column;
   background-color: white;
+  border-radius: 10px;
 }
 
 .cv-container {
@@ -79,4 +80,32 @@ h3 {
 .degree-container,
 .work-details-container {
   font-size: 1rem;
+}
+
+.fieldset-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+input,
+textarea {
+  background-color: rgba(128, 128, 128, 0.094);
+  border: none;
+  height: 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.experience-break {
+  margin: 15px 0;
 }

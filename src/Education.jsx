@@ -3,7 +3,7 @@
 export default function Education(props) {
   return (
     <fieldset>
-      <legend>Education</legend>
+      <p className="fieldset-title">Education</p>
       <label htmlFor="school">School</label>
       <input
         type="text"
