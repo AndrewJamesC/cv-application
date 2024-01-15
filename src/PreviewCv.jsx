@@ -1,17 +1,21 @@
 /* eslint-disable react/prop-types */
 export default function PreviewCv(props) {
   return (
-    <header>
-      <h1>
-        {props.personalDetails.firstName} {props.personalDetails.lastName}
-      </h1>
-      <address>
-        <a href={props.personalDetails.email}>{props.personalDetails.email}</a>
-        <a href={props.personalDetails.phoneNum}>
-          {props.personalDetails.phoneNum}
-        </a>
-        <p>{props.personalDetails.address}</p>
-      </address>
+    <div className="cv-container">
+      <header>
+        <h1>
+          {props.personalDetails.firstName} {props.personalDetails.lastName}
+        </h1>
+        <address>
+          <a href={props.personalDetails.email}>
+            {props.personalDetails.email}
+          </a>
+          <a href={props.personalDetails.phoneNum}>
+            {props.personalDetails.phoneNum}
+          </a>
+          <p>{props.personalDetails.address}</p>
+        </address>
+      </header>
       <main>
         <section>
           <h2>Education</h2>
@@ -46,6 +50,6 @@ export default function PreviewCv(props) {
           })}
         </section>
       </main>
-    </header>
+    </div>
   );
 }

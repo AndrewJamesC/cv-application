@@ -1,55 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 
 export default function Experience(props) {
-  // const [experience, setExperience] = useState([
-  //   {
-  //     companyName: "",
-  //     title: "",
-  //     start: "",
-  //     end: "",
-  //     location: "",
-  //     description: "",
-  //     id: uuid(),
-  //   },
-  // ]);
-
-  // function addExperience() {
-  //   setExperience((prevExp) => {
-  //     return [
-  //       ...prevExp,
-  //       {
-  //         companyName: "",
-  //         title: "",
-  //         start: "",
-  //         end: "",
-  //         location: "",
-  //         description: "",
-  //         id: uuid(),
-  //       },
-  //     ];
-  //   });
-  // }
-
-  // function handleChange(event, id) {
-  //   const { name, value } = event.target;
-  //   setExperience((prevExp) =>
-  //     prevExp.map((exp) => (exp.id === id ? { ...exp, [name]: value } : exp)),
-  //   );
-
-  //   // const { name, value, defaultValue } = event.target;
-  //   // const newExp = [...experience];
-  //   // if (name !== "description") {
-  //   //   setExperience((prevExp) => {
-  //   //     const newExp = [...prevExp];
-  //   //     newExp[index][name] = value;
-  //   //     return newExp;
-  //   //   });
-  //   // } else {
-  //   //   newExp[index][name] = defaultValue;
-  //   //   setExperience(newExp);
-  //   // }
-  // }
   return (
     <fieldset>
       {props.experience.map((eduObj) => {

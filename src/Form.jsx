@@ -4,7 +4,7 @@ import Experience from "./Experience";
 
 export default function Form(props) {
   return (
-    <form>
+    <form className="form">
       <PersonalDetails {...props} />
       <Education {...props} />
       <Experience {...props} />

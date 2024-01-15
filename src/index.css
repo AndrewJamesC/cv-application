@@ -1,4 +1,29 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+}
+
+.form {
+  height: 100vh;
+  width: 40vw;
+  padding: 20px;
+}
+
+fieldset,
+fieldset div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-container {
+  border: 2px solid black;
+  height: 100vh;
+  width: 60vw;
+  padding: 50px;
 }

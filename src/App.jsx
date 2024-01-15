@@ -56,7 +56,8 @@ function App() {
     );
   }
 
-  function addExperience() {
+  function addExperience(event) {
+    event.preventDefault();
     setExperience((prevExp) => {
       return [
         ...prevExp,
