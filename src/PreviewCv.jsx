@@ -7,7 +7,6 @@ export default function PreviewCv(props) {
   return (
     <div className="cv-container">
       <header className="header">
-        {!firstName && <p className="example">EXAMPLE</p>}
         <h1>
           {firstName ? firstName : "Jimmy"} {lastName ? lastName : "Conway"}
         </h1>

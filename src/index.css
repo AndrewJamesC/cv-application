@@ -36,14 +36,6 @@ fieldset div {
   background-color: white;
 }
 
-.example {
-  color: red;
-  text-align: center;
-  font-weight: 900;
-  position: absolute;
-  font-size: 1.5rem;
-}
-
 .header {
   background-color: rgba(9, 69, 9, 0.64);
   text-align: center;
