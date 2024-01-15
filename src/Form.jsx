@@ -4,10 +4,10 @@ import Experience from "./Experience";
 
 export default function Form(props) {
   return (
-    <div>
+    <form>
       <PersonalDetails {...props} />
       <Education {...props} />
       <Experience {...props} />
-    </div>
+    </form>
   );
 }

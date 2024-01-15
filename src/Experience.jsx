@@ -118,7 +118,9 @@ export default function Experience(props) {
         );
       })}
 
-      <button onClick={() => props.addExperience()}>Add Work Experience</button>
+      <button type="button" onClick={(event) => props.addExperience(event)}>
+        Add Work Experience
+      </button>
     </fieldset>
   );
 }
