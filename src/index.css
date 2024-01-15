@@ -1,16 +1,20 @@
-body {
+* {
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
   height: 100vh;
 }
 
 #root {
   display: flex;
-  height: 100vh;
+  height: 100%;
+  margin: 0;
 }
 
 .form {
-  height: 100vh;
+  height: 99%;
   width: 40vw;
   padding: 20px;
 }
@@ -23,7 +27,7 @@ fieldset div {
 
 .cv-container {
   border: 2px solid black;
-  height: 100vh;
+  height: 99%;
   width: 60vw;
   padding: 50px;
 }
